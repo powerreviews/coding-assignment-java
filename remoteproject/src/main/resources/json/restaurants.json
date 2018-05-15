@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Chipotle",
+    "type": "Tacos"
+  },
+  {
+    "name": "Jimmy John's",
+    "type": "Sandwiches"
+  },
+  {
+    "name": "Aloha",
+    "type": "Sushi"
+  },
+  {
+    "name": "Potbelly's",
+    "type": "Sandwiches"
+  },
+  {
+    "name": "Taco Bell",
+    "type": "Tacos"
+  },
+  {
+    "name": "Taza",
+    "type": "Mediterranean"
+  },
+  {
+    "name": "Monk's Pub",
+    "type": "Burgers"
+  },
+  {
+    "name": "Unni's",
+    "type": "Burgers"
+  }
+]
