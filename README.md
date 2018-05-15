@@ -1,4 +1,4 @@
-#PowerReviews Project
+# PowerReviews Project
 Thank you for your interest in PowerReviews and taking the time to complete this project. The requirements should take less than a week to complete.
 
 ## Purpose of this Project
