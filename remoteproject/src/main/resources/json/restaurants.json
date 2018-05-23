@@ -1,34 +1,50 @@
 [
   {
     "name": "Chipotle",
-    "type": "Tacos"
+    "type": "Tacos",
+    "lat": "41.869612",
+    "long": "-87.734883"
   },
   {
     "name": "Jimmy John's",
-    "type": "Sandwiches"
+    "type": "Sandwiches",
+    "lat": "35.212597", 
+    "long": "-90.025421 "
   },
   {
     "name": "Aloha",
-    "type": "Sushi"
+    "type": "Sushi",
+    "lat": "39.100178", 
+    "long": "-84.519593"
   },
   {
     "name": "Potbelly's",
-    "type": "Sandwiches"
+    "type": "Sandwiches",
+    "lat" : "38.940084", 
+    "long": "-92.342059"
   },
   {
     "name": "Taco Bell",
-    "type": "Tacos"
+    "type": "Tacos",
+    "lat": "37.913785",
+    "long": "-87.480560"
   },
   {
     "name": "Taza",
-    "type": "Mediterranean"
+    "type": "Mediterranean",
+    "lat": "36.281260",
+    "long": "-94.334198"
   },
   {
     "name": "Monk's Pub",
-    "type": "Burgers"
+    "type": "Burgers",
+    "lat": "41.869612",
+    "long": "-87.734883"
   },
   {
     "name": "Unni's",
-    "type": "Burgers"
+    "type": "Burgers",
+    "lat": "49.864903", 
+    "long": "-97.218930"
   }
 ]
