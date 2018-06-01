@@ -2,49 +2,49 @@
   {
     "name": "Chipotle",
     "type": "Tacos",
-    "lat": "41.869612",
-    "long": "-87.734883"
+    "latitude": "41.869612",
+    "longitude": "-87.734883"
   },
   {
     "name": "Jimmy John's",
     "type": "Sandwiches",
-    "lat": "35.212597", 
-    "long": "-90.025421 "
+    "latitude": "35.212597",
+    "longitude": "-90.025421 "
   },
   {
     "name": "Aloha",
     "type": "Sushi",
-    "lat": "39.100178", 
-    "long": "-84.519593"
+    "latitude": "39.100178",
+    "longitude": "-84.519593"
   },
   {
     "name": "Potbelly's",
     "type": "Sandwiches",
-    "lat" : "38.940084", 
-    "long": "-92.342059"
+    "latitude" : "38.940084",
+    "longitude": "-92.342059"
   },
   {
     "name": "Taco Bell",
     "type": "Tacos",
-    "lat": "37.913785",
-    "long": "-87.480560"
+    "latitude": "37.913785",
+    "longitude": "-87.480560"
   },
   {
     "name": "Taza",
     "type": "Mediterranean",
-    "lat": "36.281260",
-    "long": "-94.334198"
+    "latitude": "36.281260",
+    "longitude": "-94.334198"
   },
   {
     "name": "Monk's Pub",
     "type": "Burgers",
-    "lat": "41.869612",
-    "long": "-87.734883"
+    "latitude": "41.869612",
+    "longitude": "-87.734883"
   },
   {
     "name": "Unni's",
     "type": "Burgers",
-    "lat": "49.864903", 
-    "long": "-97.218930"
+    "latitude": "49.864903",
+    "longitude": "-97.218930"
   }
 ]
