@@ -4,27 +4,39 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name = "restaurant")
 public class RestaurantEntity {
-
-
     @Id
+    private Integer id;
+
+    @Column
     private String name;
 
     @Column
     private String type;
 
+    @Column
     private String latitude;
 
+    @Column
     private String longitude;
 
     public RestaurantEntity(){}
 
-    public RestaurantEntity(String name, String type, String latitude, String longitude) {
+    public RestaurantEntity(Integer id, String name, String type, String latitude, String longitude) {
+        this.id = id;
         this.name = name;
         this.type = type;
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -63,6 +75,7 @@ public class RestaurantEntity {
     @Override
     public String toString() {
         return "RestaurantEntity{" +
+                "id=" + id +
                 "name='" + name + '\'' +
                 ", type='" + type + '\'' +
                 ", lat='" + latitude + '\'' +
