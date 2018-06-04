@@ -1,4 +1,4 @@
-package com.powerreviews.project.restaurant;
+package com.powerreviews.project.persistence;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

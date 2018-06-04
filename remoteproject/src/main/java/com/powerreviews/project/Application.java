@@ -2,8 +2,10 @@ package com.powerreviews.project;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.powerreviews.project.restaurant.RestaurantEntity;
-import com.powerreviews.project.restaurant.RestaurantRepository;
+import com.powerreviews.project.persistence.RestaurantEntity;
+import com.powerreviews.project.persistence.RestaurantRepository;
+import com.powerreviews.project.persistence.UserEntity;
+import com.powerreviews.project.persistence.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,21 +23,34 @@ public class Application {
 	}
 
 	@Bean
-	CommandLineRunner runner(RestaurantRepository repository) {
+	CommandLineRunner runner(RestaurantRepository restaurantRepository, UserRepository userRepository) {
 		return args -> {
 			// read json and write to db
 			ObjectMapper mapper = new ObjectMapper();
-			//implement a POJO representation and replace Object
-			TypeReference<List<RestaurantEntity>> typeReference = new TypeReference<List<RestaurantEntity>>(){};
+
+			TypeReference<List<RestaurantEntity>> restaurantTypeReference = new TypeReference<List<RestaurantEntity>>(){};
 			InputStream inputStream = TypeReference.class.getResourceAsStream("/json/restaurants.json");
 			try {
-				List<RestaurantEntity> restaurants = mapper.readValue(inputStream, typeReference);
+				List<RestaurantEntity> restaurants = mapper.readValue(inputStream, restaurantTypeReference);
 				//save restaurants to the database
-				repository.saveAll(restaurants);
+				restaurantRepository.saveAll(restaurants);
 			} catch (IOException e){
-				//TODO Establish a standard and use a logging framework
 				System.out.println("Unable to save restaurants: " + e.getMessage());
 			}
+
+			TypeReference<List<UserEntity>> userTypeReference = new TypeReference<List<UserEntity>>(){};
+			inputStream = TypeReference.class.getResourceAsStream("/json/users.json");
+			try {
+				List<UserEntity> users = mapper.readValue(inputStream, userTypeReference);
+				//save users to the database
+				userRepository.saveAll(users);
+			} catch (IOException e){
+				System.out.println("Unable to save users: " + e.getMessage());
+			}
+
+			// The two repositories are initialized using very similar code.
+			// Is it possible to combine these into a single, more generic approach to keep things more DRY?
+			// Would that be advisable?
 		};
 	}
 }

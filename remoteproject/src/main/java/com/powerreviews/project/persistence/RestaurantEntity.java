@@ -1,4 +1,4 @@
-package com.powerreviews.project.restaurant;
+package com.powerreviews.project.persistence;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
