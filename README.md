@@ -23,6 +23,8 @@ The requirements ask to implement the following endpoints:
     - example: I want to read more reviews from a given user.
 - Add a review to a restaurant
     - example: I did not like my meal from Jimmy John's, so I want to leave bad feedback.
+- Return restaurants based on how close they are to the user
+    - example: Given latitude and longitude, I want to get a list of restaurants that are ordered by distance to me.
 
 Your code should be version controlled and publicly accessible by someone on our team for review (github/bit-bucket/gitlab/etc)
 
@@ -37,11 +39,6 @@ curl -XPOST http://localhost:8080/your/review/endpoint
     your_review_json: your_review_json_data
 }'
 ```
-
-There are two extra credit endpoints that you can implement if you choose to: 
-- Allow a user to update his/her review.
-- Allow a restaurant to respond to a review.
-    
 ## Constraints 
 We need to perform data validations on the reviews we are receiving. 
 Error messages from the application should clearly identify any data constraint/integrity issues.
