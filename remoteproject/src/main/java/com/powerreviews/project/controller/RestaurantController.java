@@ -24,17 +24,9 @@ public class RestaurantController {
         return new ResponseEntity<>(restaurant, new HttpHeaders(), restaurant == null ? HttpStatus.NOT_FOUND : HttpStatus.OK);
     }
 
-    // Could we build an endpoint to search for a restaurant based on a partial match of its name?
-    // What would the endpoint signature be?
-    // Where would the logic for the search go?
-
     @ResponseBody
     @RequestMapping(value = "/restaurant", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RestaurantEntity> post(@RequestBody RestaurantEntity restaurant) {
-        // What kind of validation can be put here and how?
-        // What should happen if this is a duplicate restaurant?
-        // How do we determine if it is a duplicate?
-        // Where should that determination be made?
         int id = restaurantRepository.maxId() + 1;
         restaurant.setId(id);
         restaurantRepository.save(restaurant);
@@ -49,7 +41,6 @@ public class RestaurantController {
         if (updated == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        // What other pattern could be put in place as a way to update the restaurant's attributes?
         updated.setLatitude(restaurant.getLatitude());
         updated.setLongitude(restaurant.getLongitude());
         updated.setName(restaurant.getName());
@@ -61,7 +52,6 @@ public class RestaurantController {
     @ResponseBody
     @RequestMapping(value = "/restaurant/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RestaurantEntity> delete(@PathVariable Integer id) {
-        // What should happen if the restaurant doesn't exist?
         restaurantRepository.deleteById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

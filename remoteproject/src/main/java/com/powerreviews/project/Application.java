@@ -47,10 +47,6 @@ public class Application {
 			} catch (IOException e){
 				System.out.println("Unable to save users: " + e.getMessage());
 			}
-
-			// The two repositories are initialized using very similar code.
-			// Is it possible to combine these into a single, more generic approach to keep things more DRY?
-			// Would that be advisable?
 		};
 	}
 }
