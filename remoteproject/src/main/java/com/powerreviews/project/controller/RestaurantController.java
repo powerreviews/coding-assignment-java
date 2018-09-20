@@ -36,7 +36,6 @@ public class RestaurantController {
     @ResponseBody
     @RequestMapping(value = "/restaurant", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RestaurantEntity> put(@RequestBody RestaurantEntity restaurant) {
-        // What kind of validation can be put here and how?
         RestaurantEntity updated = restaurantRepository.findById(restaurant.getId()).orElse(null);
         if (updated == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
